@@ -19,6 +19,7 @@ public class CalculationsVerbalizerTest {
         assertEquals("1.0 minus 2.0 gives value -1.0",calculationsVerbalizerUnderTest.verbalize(Operation.SUBTRACT,1,2,-1));
         assertEquals("1.0 multiplied by 2.0 gives value 2.0",calculationsVerbalizerUnderTest.verbalize(Operation.MULTIPLY,1,2,2));
         assertEquals("1.0 divided by 2.0 gives value 0.5",calculationsVerbalizerUnderTest.verbalize(Operation.DIVIDE,1,2,(float)0.5));
+        assertEquals("Average of 2.0 and 6.0 and 7.0 gives value 5.0",calculationsVerbalizerUnderTest.verbalize(Operation.AVERAGE,2,6,7,5));
     }
 
     @After

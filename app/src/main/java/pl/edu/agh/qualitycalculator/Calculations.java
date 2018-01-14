@@ -8,9 +8,21 @@ public class Calculations {
         } else if (op.equals(Operation.SUBTRACT)) {
             return subtract(operand1, operand2);
         } else if (op.equals(Operation.DIVIDE)) {
-            return divide(operand1, operand2);
+            if(operand2!=0) {
+                return divide(operand1, operand2);
+            }
+            else {
+                throw new Exception("Division by zero");
+            }
         } else if (op.equals(Operation.MULTIPLY)) {
             return multiply(operand1, operand2);
+        } else {
+            throw new Exception("Unknown operation");
+        }
+    }
+    public float calculate(Operation op, float operand1, float operand2, float operand3) throws Exception {
+        if (op.equals(Operation.AVERAGE)) {
+            return average(operand1, operand2, operand3);
         } else {
             throw new Exception("Unknown operation");
         }
@@ -28,8 +40,11 @@ public class Calculations {
         return operand1 * operand2;
     }
 
-    private float divide(float operand1, float operand2) {
+    private float divide(float operand1, float operand2)  throws Exception{
         return operand1 / operand2;
+    }
+    private float average(float operand1, float operand2, float operand3)  throws Exception{
+        return (operand1 + operand2 + operand3)/3.0f;
     }
 
 }

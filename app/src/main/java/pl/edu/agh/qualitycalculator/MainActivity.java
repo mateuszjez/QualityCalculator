@@ -68,15 +68,25 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.btnDiv:
                 selectedOperation = Operation.DIVIDE;
                 break;
+            case R.id.btnAv:
+                selectedOperation = Operation.AVERAGE;
+                break;
             default:
                 break;
         }
 
         float num1 = Float.parseFloat(etNum1.getText().toString());
         float num2 = Float.parseFloat(etNum2.getText().toString());
+        float num3 = Float.parseFloat(etNum2.getText().toString());
         try {
-            float result = calculations.calculate(selectedOperation, num1, num2);
-            String verbalizedOperation = verbalizer.verbalize(selectedOperation, num1, num2, result);
+            float result;
+            if(selectedOperation!=Operation.AVERAGE) {
+                result = calculations.calculate(selectedOperation, num1, num2, num3);
+            }
+            else{
+                result = calculations.calculate(selectedOperation, num1, num2);
+            }
+            String verbalizedOperation = verbalizer.verbalize(selectedOperation, num1, num2, num3, result);
             tvResult.setText(verbalizedOperation);
         }
         catch (Exception ex) {
