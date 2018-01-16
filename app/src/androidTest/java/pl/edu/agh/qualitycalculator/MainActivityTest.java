@@ -55,7 +55,7 @@ public class MainActivityTest {
 
         onView(withId(R.id.etNum1)).perform(click()).perform(typeText("9"));
         onView(withId(R.id.etNum2)).perform(click()).perform(typeText("4"));
-        onView(withId(R.id.btnSub)).perform(click());
+        onView(withId(R.id.btnDiv)).perform(click());
         onView(withId(R.id.tvResult)).check(matches(withText("9.0 divided by 4.0 gives value 2.25")));
     }
     @Test
@@ -65,7 +65,7 @@ public class MainActivityTest {
         onView(withId(R.id.etNum1)).perform(click()).perform(typeText("2"));
         onView(withId(R.id.etNum2)).perform(click()).perform(typeText("6"));
         onView(withId(R.id.etNum3)).perform(click()).perform(typeText("7"));
-        onView(withId(R.id.btnSub)).perform(click());
+        onView(withId(R.id.btnAv)).perform(click());
         onView(withId(R.id.tvResult)).check(matches(withText("Average of 2.0 and 6.0 and 7.0 gives value 5.0")));
     }
 }
