@@ -14,11 +14,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     EditText etNum1;
     EditText etNum2;
+    EditText etNum3;
 
     Button btnAdd;
     Button btnSub;
     Button btnMult;
     Button btnDiv;
+    Button btnAv;
 
     TextView tvResult;
 
@@ -32,11 +34,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         etNum1 = (EditText) findViewById(R.id.etNum1);
         etNum2 = (EditText) findViewById(R.id.etNum2);
+        etNum3 = (EditText) findViewById(R.id.etNum3);
 
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnSub = (Button) findViewById(R.id.btnSub);
         btnMult = (Button) findViewById(R.id.btnMult);
         btnDiv = (Button) findViewById(R.id.btnDiv);
+        btnAv = (Button) findViewById(R.id.btnAv);
 
         tvResult = (TextView) findViewById(R.id.tvResult);
 
@@ -44,6 +48,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btnSub.setOnClickListener(this);
         btnMult.setOnClickListener(this);
         btnDiv.setOnClickListener(this);
+        btnAv.setOnClickListener(this);
     }
 
     @Override
@@ -77,7 +82,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         float num1 = Float.parseFloat(etNum1.getText().toString());
         float num2 = Float.parseFloat(etNum2.getText().toString());
-        float num3 = Float.parseFloat(etNum2.getText().toString());
+        float num3 = Float.parseFloat(etNum3.getText().toString());
         try {
             float result;
             if(selectedOperation!=Operation.AVERAGE) {
