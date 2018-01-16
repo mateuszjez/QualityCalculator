@@ -82,10 +82,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         float num1 = Float.parseFloat(etNum1.getText().toString());
         float num2 = Float.parseFloat(etNum2.getText().toString());
-        float num3 = Float.parseFloat(etNum3.getText().toString());
         try {
             float result;
             if(selectedOperation!=Operation.AVERAGE) {
+                float num3 = Float.parseFloat(etNum3.getText().toString());
                 result = calculations.calculate(selectedOperation, num1, num2, num3);
             }
             else{
