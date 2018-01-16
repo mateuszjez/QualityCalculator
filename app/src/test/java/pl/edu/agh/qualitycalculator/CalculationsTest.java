@@ -1,5 +1,7 @@
 package pl.edu.agh.qualitycalculator;
 
+import junit.framework.Assert;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -34,15 +36,16 @@ public class CalculationsTest {
     public void testAverage() throws Exception {
         assertEquals(5, calculationsUnderTest.calculate(Operation.AVERAGE, 2, 6, 7), 0.01);
     }
-//    @Test
-//    public void testDivideByZero() throws Exception {
-//        try {
-//            calculationsUnderTest.calculate(Operation.DIVIDE, 9, 0);
-//        }
-//        catch(Exception ex) {
-//            assertEquals(new Exception("Division by zero"),ex.toString());
-//        }
-//    }
+    @Test
+    public void testDivideByZero() throws Exception {
+        try {
+            calculationsUnderTest.calculate(Operation.DIVIDE, 9, 0);
+            Assert.fail("Division by zero");
+        }
+        catch(Exception ex) {
+            //success :)
+        }
+    }
 
     @After
     public void tearDown() {
