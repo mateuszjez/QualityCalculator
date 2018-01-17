@@ -84,7 +84,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         try {
             float result;
             String verbalizedOperation;
-            if(selectedOperation!=Operation.AVERAGE) {
+            if(selectedOperation==Operation.AVERAGE) {
                 float num3 = Float.parseFloat(etNum3.getText().toString());
                 result = calculations.calculate(selectedOperation, num1, num2, num3);
                 verbalizedOperation = verbalizer.verbalize(selectedOperation, num1, num2, num3, result);
