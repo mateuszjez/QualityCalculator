@@ -46,6 +46,26 @@ public class CalculationsTest {
             //success :)
         }
     }
+    @Test
+    public void testUnknownOperation1() throws Exception {
+        try{
+            calculationsUnderTest.calculate(null,1,2);
+            Assert.fail("Unknown operation");
+        }
+        catch(Exception ex){
+            //success
+        }
+    }
+    @Test
+    public void testUnknownOperation2() throws Exception {
+        try{
+            calculationsUnderTest.calculate(null,1,2,3);
+            Assert.fail("Unknown operation");
+        }
+        catch(Exception ex){
+            //success
+        }
+    }
 
     @After
     public void tearDown() {

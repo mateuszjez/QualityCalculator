@@ -69,6 +69,15 @@ public class MainActivityTest {
         onView(withId(R.id.tvResult)).check(matches(withText("Average of 2.0 and 6.0 and 7.0 gives value 5.0")));
     }
     @Test
+    public void testAverage2(){
+        //fail("Not implemented yet!");
+
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText("2"));
+        onView(withId(R.id.etNum2)).perform(click()).perform(typeText("6"));
+        onView(withId(R.id.btnAv)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("Average of 2.0 and 6.0 gives value 4.0")));
+    }
+    @Test
     public void noInput(){
         //fail("Not implemented yet!");
 
