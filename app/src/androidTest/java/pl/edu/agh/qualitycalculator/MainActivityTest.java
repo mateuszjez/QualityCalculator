@@ -78,7 +78,7 @@ public class MainActivityTest {
     @Test
     public void noInputAv(){
         //fail("Not implemented yet!");
-        onView(withId(R.id.etNum1)).perform(click()).perform(typeText("2"));
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText("3"));
         onView(withId(R.id.etNum2)).perform(click()).perform(typeText("6"));
         onView(withId(R.id.btnAv)).perform(click());
         onView(withId(R.id.tvResult)).check(matches(withText("Enter some data to calculate")));
