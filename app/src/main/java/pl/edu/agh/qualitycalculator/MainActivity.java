@@ -100,7 +100,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             tvResult.setText(verbalizedOperation);
         }
         catch (Exception ex) {
-            tvResult.setText("An error ocurred: " + ex.toString());
+            tvResult.setText("An error ocurred: " + ex.getMessage());
         }
 
     }
