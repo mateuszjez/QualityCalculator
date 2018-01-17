@@ -37,6 +37,10 @@ public class CalculationsTest {
         assertEquals(5, calculationsUnderTest.calculate(Operation.AVERAGE, 2, 6, 7), 0.01);
     }
     @Test
+    public void testAverage2() throws Exception {
+        assertEquals(4, calculationsUnderTest.calculate(Operation.AVERAGE, 2, 6), 0.01);
+    }
+    @Test
     public void testDivideByZero() throws Exception {
         try {
             calculationsUnderTest.calculate(Operation.DIVIDE, 9, 0);
