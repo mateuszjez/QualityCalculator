@@ -94,6 +94,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 result = calculations.calculate(selectedOperation, num1, num2);
                 verbalizedOperation = verbalizer.verbalize(selectedOperation, num1, num2, result);
             }
+
             tvResult.setText(verbalizedOperation);
         }
         catch (Exception ex) {
