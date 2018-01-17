@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import pl.edu.agh.qualitycalculator.R;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -98,7 +97,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
         catch (Exception ex) {
             tvResult.setText("An error ocurred: " + ex.toString());
-        };
+        }
 
     }
 }
