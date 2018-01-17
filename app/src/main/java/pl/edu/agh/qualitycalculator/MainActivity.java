@@ -52,11 +52,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (TextUtils.isEmpty(etNum1.getText().toString())
-                || TextUtils.isEmpty(etNum2.getText().toString())) {
-            tvResult.setText("Enter some data to calculate");
-            return;
-        }
 
         Operation selectedOperation = null;
         switch (v.getId()) {
@@ -78,7 +73,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
             default:
                 break;
         }
-
+        if (TextUtils.isEmpty(etNum1.getText().toString())
+                || TextUtils.isEmpty(etNum2.getText().toString())) {
+            tvResult.setText("Enter some data to calculate");
+            return;
+        }
+        if (TextUtils.isEmpty(etNum3.getText().toString())
+                && selectedOperation==Operation.AVERAGE) {
+            tvResult.setText("Enter some data to calculate");
+            return;
+        }
         float num1 = Float.parseFloat(etNum1.getText().toString());
         float num2 = Float.parseFloat(etNum2.getText().toString());
         try {
